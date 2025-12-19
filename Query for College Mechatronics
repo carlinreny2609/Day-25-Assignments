@@ -1,0 +1,29 @@
+create database collegedatabase;
+
+use collegedatabase;
+
+create Table collegeList(
+Sl_no int(3) primary key,
+College_Name varchar(25) not null,
+College_Code varchar(10) unique not null,
+Courses varchar(40) not null,
+No_Of_Students int(5)not null
+);
+
+insert into collegeList 
+values('1','Anna University','Coll_001','Mechatronics','200'),
+('2','Sathyabama University','Coll_002','ECE','100'),
+('3','Sasthra University','Coll_003','IT','300'),
+('4','VIT ','Coll_004','EEE','400'),
+('5','MIT ','Coll_005','Pharamedical Science','40'),
+('6','Kongu Engineering College ','Coll_006','Msc.It','40'),
+('7','SRM University','Coll_007','Mechatronics','50'),
+('8','Christ University','Coll_008','Mechatronics','100');
+show tables;
+
+describe collegeList;
+
+select * from collegeList 
+where Courses ='Mechatronics' 
+and (No_Of_Students >= '100');
+
