@@ -1,0 +1,28 @@
+create database Shopping;
+
+use shopping;
+
+create Table Products(
+Sl_no int(3) primary key,
+Product_Name varchar(25) not null,
+Net_weight_Grams int(5) not null,
+Price_Rs float(4) not null,
+No_Of_Products int(5)not null
+);
+
+insert into Products 
+values('1','Rice','1000','78.00','85'),
+('2','dhal','500','100.00','45'),
+('3','Paneer','100','90.00','49'),
+('4','Turmeric','100','78.00','20'),
+('5','Chillipowder','300','18.00','18'),
+('6','Wheat','500','128.00','60'),
+('7','Almonds','500','78.00','8'),
+('8','Millets','250','136','65');
+show tables;
+
+describe Products;
+
+select * from Products 
+where Net_weight_Grams ='500';
+
